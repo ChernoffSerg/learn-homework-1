@@ -14,12 +14,26 @@
 
 """
 
+def get_class_user(age_str):
+  age = int(age_str)
+  if age < 7:
+    return "Детский сад"
+  elif age < 18:
+    return "Школа"
+  elif age < 24:
+    return "ВУЗ"
+  else:
+    return "Работа"
+
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    age_str = input('Ваш возраст: ')
+    class_user = get_class_user(age_str) 
+    print(class_user)
+    
 
 if __name__ == "__main__":
     main()
